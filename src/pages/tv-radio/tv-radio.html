@@ -1,0 +1,44 @@
+<!--
+  Generated template for the TvRadioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <menu [titulo]='"Tv y Radio"'></menu>
+
+</ion-header>
+<ion-content>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="tv">
+        TV
+      </ion-segment-button>
+      <ion-segment-button value="radio">
+        Radio
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'tv'">
+      <ion-item *ngFor='let item of videos | object'>
+
+        <h2>{{item.nombre}}</h2>
+        <p>{{item.url}}</p>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'radio'">
+      <ion-item *ngFor='let item of radios | object'>
+
+        <h2>{{item.nombre}}</h2>
+      </ion-item>
+
+    </ion-list>
+  </div>
+
+</ion-content>

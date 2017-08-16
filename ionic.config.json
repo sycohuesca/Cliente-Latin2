@@ -1,5 +1,8 @@
 {
   "name": "p3",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "632087d9 ",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
