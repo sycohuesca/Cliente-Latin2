@@ -4,10 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AlertController } from 'ionic-angular';
 import { TabsPage } from '../pages/tabs/tabs';
-import {
-  Push,
-  PushToken
-} from '@ionic/cloud-angular';
+import { Push, PushOptions } from '@ionic-native/push';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,9 +18,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      this.registerToken();
-      this.getNotifications();
 
+      this.noti();
       this.showAlert();
     });
 
@@ -48,25 +44,24 @@ export class MyApp {
     alert.present();
   }
 
-  private registerToken() {
-    this.push.register().then((t: PushToken) => {
-      return this.push.saveToken(t, {
-        ignore_user: true
-      });
-    }).then((t: PushToken) => {
-      console.log('Token saved:', t.token);
-    });
-  }
+  noti() {
 
-  private getNotifications() {
-    this.push.rx.notification()
-      .subscribe((msg) => {
-        this.alertCtrl.create({
-          title: msg.title,
-          subTitle: msg.text,
-        }).present();
-        // alert(msg.title + ': ' + msg.text);
-      });
+    const options: PushOptions = {
+      android: {
+        senderID: '587750896606',
+        forceShow: true,
+        topics: ['publi'],
+        vibrate: true,
+        sound: 'default'
+      }
+    };
+    const pushObject = this.push.init(options);
+    pushObject.on('notification').subscribe(notification => console.log(notification));
+
+    pushObject.on('registration').subscribe((registration: any) => console.log('Device registered', registration));
+
+    pushObject.on('error').subscribe(error => alert('Error with Push plugin' + error));
+
   }
 
 
