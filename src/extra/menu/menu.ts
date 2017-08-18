@@ -17,7 +17,7 @@ export class MenuComponent {
 
 
   constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController, public menuCon: MenuController) {
-    console.log('Hello MenuComponent Component');
+
 
   }
 
@@ -32,13 +32,7 @@ export class MenuComponent {
             this.navCtrl.push('MapaPage');
           }
         },
-        {
-          text: 'Compartir',
-          icon: 'share',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },
+
         {
           text: 'Acerca de...',
           icon: 'create',

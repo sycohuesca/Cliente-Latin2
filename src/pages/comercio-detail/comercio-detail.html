@@ -29,6 +29,10 @@
         <ion-item>
           <ion-icon item-start name="call"> </ion-icon>
           {{comercio.telefono}}
+          <button ion-button item-end outline (click)='llamar(comercio.telefono)'>
+              Llamar
+                </button>
+
         </ion-item>
         <ion-item>
           <ion-icon item-start name="map"> </ion-icon>

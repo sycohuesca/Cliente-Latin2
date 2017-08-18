@@ -16,7 +16,7 @@ import { TvRadioPageModule } from "../pages/tv-radio/tv-radio.module";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ServiceProvider } from '../providers/service';
-
+import { CallNumber } from '@ionic-native/call-number';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { ServiceProvider } from '../providers/service';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ServiceProvider,
-    Push
+    Push,
+    CallNumber
   ]
 })
 export class AppModule { }
