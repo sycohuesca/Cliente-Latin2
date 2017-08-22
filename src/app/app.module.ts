@@ -12,6 +12,8 @@ import { ComercioDetailPageModule } from "../pages/comercio-detail/comercio-deta
 import { ContactoPageModule } from "../pages/contacto/contacto.module";
 import { MapaPageModule } from "../pages/mapa/mapa.module";
 import { TvRadioPageModule } from "../pages/tv-radio/tv-radio.module";
+import { RadioPageModule } from "../pages/radio/radio.module";
+import { TvPageModule } from "../pages/tv/tv.module";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,6 +35,8 @@ import { CallNumber } from '@ionic-native/call-number';
     ContactoPageModule,
     MapaPageModule,
     TvRadioPageModule,
+    TvPageModule,
+    RadioPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

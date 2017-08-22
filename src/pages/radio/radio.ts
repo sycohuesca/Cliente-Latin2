@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
 
 /**
  * Generated class for the RadioPage page.
@@ -7,18 +7,19 @@ import { NavController, NavParams } from 'ionic-angular';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-
+@IonicPage()
 @Component({
   selector: 'page-radio',
   templateUrl: 'radio.html',
 })
 export class RadioPage {
-
+  radio: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.radio = this.navParams.get('radio');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RadioPage');
+
   }
 
 }

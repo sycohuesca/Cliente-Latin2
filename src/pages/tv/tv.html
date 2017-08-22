@@ -7,12 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tv</ion-title>
+    <menu [titulo]='tv.nombre'></menu>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{tv.nombre}}
+    </ion-card-header>
+    <ion-card-content>
+      {{tv.descripcion}}
+      <a ion-button block [href]='tv.url' target="_blank">Ver Video</a>
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>

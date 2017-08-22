@@ -23,19 +23,18 @@
 
 
   <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'tv'">
-      <ion-item *ngFor='let item of videos | object'>
-
-        <h2>{{item.nombre}}</h2>
-        <p>{{item.url}}</p>
+    <ion-list *ngSwitchCase="'tv'" inset>
+      <ion-item *ngFor='let tv of videos | object' (click)='verTv(tv)'>
+        <ion-icon item-start name="videocam"></ion-icon>
+        {{tv.nombre}}
       </ion-item>
 
     </ion-list>
 
-    <ion-list *ngSwitchCase="'radio'">
-      <ion-item *ngFor='let item of radios | object'>
-
-        <h2>{{item.nombre}}</h2>
+    <ion-list *ngSwitchCase="'radio'" inset>
+      <ion-item *ngFor='let radio of radios | object' (click)='verRadio(radio)'>
+        <ion-icon item-start name="radio"></ion-icon>
+        {{radio.nombre}}
       </ion-item>
 
     </ion-list>

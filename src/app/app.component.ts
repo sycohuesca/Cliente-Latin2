@@ -11,6 +11,7 @@ import { Push, PushOptions } from '@ionic-native/push';
 })
 export class MyApp {
   rootPage: any = TabsPage;
+  respuesta: boolean;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public push: Push, public alertCtrl: AlertController) {
     platform.ready().then(() => {
@@ -31,13 +32,13 @@ export class MyApp {
     let res: boolean = true;
     let alert = this.alertCtrl.create({
       title: 'Recordatoriao',
-      subTitle: 'Bienvendio a nuetsra aplicacion!',
+      subTitle: 'Aquí encontrarás bares, restaurantes, locutorios y toda clase de comercios latinos.',
 
       buttons: ['OK']
     });
     alert.addInput({
       type: 'checkbox',
-      label: 'No volver a ver este mensaje',
+      label: 'No volver a ver este mensaje.',
       value: 'si',
       checked: res
     });

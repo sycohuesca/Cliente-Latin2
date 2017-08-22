@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>radio</ion-title>
+    <menu [titulo]='radio.nombre'></menu>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{radio.nombre}}
+    </ion-card-header>
+    <ion-card-content>
+      <h1>Frecuencia:{{radio.frequencia}}</h1>
+      Descripción: {{radio.descripcion}}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
