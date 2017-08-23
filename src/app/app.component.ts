@@ -29,19 +29,28 @@ export class MyApp {
 
 
   showAlert() {
-    let res: boolean = true;
     let alert = this.alertCtrl.create({
-      title: 'Recordatoriao',
+      title: 'Te esperamos',
       subTitle: 'Aquí encontrarás bares, restaurantes, locutorios y toda clase de comercios latinos.',
+      inputs: [{
+        type: 'checkbox',
+        label: 'No volver a ver este mensaje.',
+        id: 'res',
+        value: 'si',
+        checked: false
+      }
+      ],
+      buttons: [
+        {
+          text: 'Aceptar',
+          role: 'cancel',
+          handler: (res) => {
+            console.log(res);
+          }
+        }
+      ]
+    });
 
-      buttons: ['OK']
-    });
-    alert.addInput({
-      type: 'checkbox',
-      label: 'No volver a ver este mensaje.',
-      value: 'si',
-      checked: res
-    });
     alert.present();
   }
 

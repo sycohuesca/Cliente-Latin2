@@ -20,9 +20,12 @@ export class CategoriaPage {
   loader: any;
 
   constructor(public navCtrl: NavController, private service: ServiceProvider,
-    private loadingCtrl: LoadingController) { }
+    private loadingCtrl: LoadingController) {
+
+  }
 
   ionViewDidLoad() {
+    this.navCtrl.push('InicioPage');
     this.presentLoading();
   }
 
