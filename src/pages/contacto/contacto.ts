@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, IonicPage } from 'ionic-angular';
-
+import { CallNumber } from '@ionic-native/call-number';
 /**
  * Generated class for the ContactoPage page.
  *
@@ -14,11 +14,16 @@ import { NavController, NavParams, IonicPage } from 'ionic-angular';
 })
 export class ContactoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private callNumber: CallNumber) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactoPage');
+
+  }
+  llamar() {
+    this.callNumber.callNumber('633868137', false)
+      .then(() => console.log('Launched dialer!'))
+      .catch(() => console.log('Error launching dialer'));
   }
 
 }
