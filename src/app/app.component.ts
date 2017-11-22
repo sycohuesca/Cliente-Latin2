@@ -35,7 +35,6 @@ export class MyApp {
       inputs: [{
         type: 'checkbox',
         label: 'No volver a ver este mensaje.',
-        id: 'res',
         value: 'si',
         checked: false
       }
@@ -44,8 +43,8 @@ export class MyApp {
         {
           text: 'Aceptar',
           role: 'cancel',
-          handler: (res) => {
-            console.log(res);
+          handler: data => {
+            console.log(data[0]);
           }
         }
       ]
@@ -53,6 +52,8 @@ export class MyApp {
 
     alert.present();
   }
+
+
 
   noti() {
 

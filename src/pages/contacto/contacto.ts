@@ -21,7 +21,7 @@ export class ContactoPage {
 
   }
   llamar() {
-    this.callNumber.callNumber('633868137', false)
+    this.callNumber.callNumber('644779912', false)
       .then(() => console.log('Launched dialer!'))
       .catch(() => console.log('Error launching dialer'));
   }

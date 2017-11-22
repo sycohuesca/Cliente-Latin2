@@ -14,8 +14,8 @@
 
   <ion-list inset>
     <button ion-item *ngFor="let comercio of categoria.comercios | object | buscar: far.value " (click)="itemSelected(comercio)">
-    <ion-icon [name]="categoria.icono" item-start></ion-icon>{{ comercio.nombre }}
-  </button>
+      <ion-icon [name]="categoria.icono" item-start></ion-icon>{{ comercio.nombre }}
+    </button>
   </ion-list>
 
 

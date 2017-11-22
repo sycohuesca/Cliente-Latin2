@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service';
 import { LoadingController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the CategoriasListaPage page.
  *
@@ -20,7 +21,7 @@ export class CategoriaPage {
   loader: any;
 
   constructor(public navCtrl: NavController, private service: ServiceProvider,
-    private loadingCtrl: LoadingController) {
+    private loadingCtrl: LoadingController, public alertCtrl: AlertController) {
 
   }
 
@@ -47,5 +48,6 @@ export class CategoriaPage {
   itemSelected(categoria: any) {
     this.navCtrl.push('ComercioPage', { categoria: categoria });
   }
+
 
 }

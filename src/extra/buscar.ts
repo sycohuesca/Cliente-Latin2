@@ -13,12 +13,12 @@ export class BuscarPipe implements PipeTransform {
   /**
    * Takes a value and makes it lowercase.
    */
- transform(items: any[],  value: string): any[] {
+  transform(items: any[], value: string): any[] {
     if (value && value.trim() != '') {
-        items = items.filter((item) => {
+      items = items.filter((item) => {
         return (item.nombre.toLowerCase().indexOf(value.toLowerCase()) > -1);
       })
     }
     return items;
- }
+  }
 }
