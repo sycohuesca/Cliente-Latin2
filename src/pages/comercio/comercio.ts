@@ -14,6 +14,7 @@ import { NavController, NavParams, IonicPage } from 'ionic-angular';
 })
 export class ComercioPage {
   categoria: any;
+  ciudad: string = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.categoria = this.navParams.get('categoria');

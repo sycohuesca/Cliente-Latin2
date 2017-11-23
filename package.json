@@ -2,7 +2,7 @@
   "name": "latin2",
   "version": "1.1.1",
   "author": "AJ Lucea",
-  "homepage": "http://latin2apk.tk/",
+  "homepage": "http://latin2.tk/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",

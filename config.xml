@@ -2,7 +2,7 @@
 <widget id="io.ionic.latin2.servidor" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Latin2</name>
     <description>Encuentra tus sitios latinos cerca de ti.</description>
-    <author email="ajlucea@hotmail.com" href="http://ionicframework.com/">AJ Lucea</author>
+    <author email="ajlucea@hotmail.com" href="http://latin2.tk/">AJ Lucea</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
